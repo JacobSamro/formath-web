@@ -19,8 +19,9 @@ form h2{
 }
 
 form input{
-	width: 100%;
+	width: 91%;
 	cursor: pointer;
+	display: inline-block;
 }
 
 form button{
@@ -45,4 +46,40 @@ form #result{
 	color: #FFF;
 	padding: 10px;
 	line-height: 26px;
+}
+
+form .buttonHolder{
+	width: 40px;
+	text-align: center;
+	margin:0 auto;
+}
+
+button{
+	text-align: center;
+}
+img.upload{
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+	display: inline-block;
+}
+input#image{
+	display: none;
+}
+button#snap{
+	background: url('camera-icon.png');
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+	display: inline-block;
+	/* margin: 0; */
+	padding: 0;
+}
+
+label.upload-label{
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin: 0;
+	padding: 0;
 }

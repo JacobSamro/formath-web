@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>forMath - Testing Interface</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,9 +10,17 @@
 
 <form >
 	<h2>forMath - Testing Interface</h2>
+	<div class="buttonHolder">
+	<label for="image" class="upload-label">
+		<img src="upload.png" class="upload"> 
+	</label>
 	<input type="file" name="image" accept=".png,.jpg" id="image" />
+	<button type="button" id="snap"></button>
+	</div>
 	<button type="button" id="calculate">Calculate</button>
 	<div id="result"></div>
+	<video id="video" width="640" height="480" autoplay></video>
+	<canvas id="canvas" width="640" height="480"></canvas>
 </form>
 
 </body>
