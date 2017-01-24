@@ -23,7 +23,8 @@ $("#calculate").click(function(){
 		})
 		.fail(function(msg){
 
-		    errorMessage("Internet Connection Failed!");
+			log.innerHTML = "Internet Connection Failed!<br/>" + log.innerHTML;
+
 
 		})
 		.done(function( msg ) {
