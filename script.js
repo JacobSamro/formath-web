@@ -1,5 +1,13 @@
 
+
+var nanobar = new Nanobar();
+
+
+
 $("#calculate").click(function(){
+
+	nanobar.go(0);
+	
 
 	
 	var reader = new FileReader();
@@ -11,6 +19,8 @@ $("#calculate").click(function(){
 	var file = image.files[0];
 
 	reader.onload = function (e) {
+
+		nanobar.go(30);
 
 		var _dataImage = e.target.result.replace("data:image/png;base64,","");
 		
@@ -29,6 +39,8 @@ $("#calculate").click(function(){
 
 		})
 		.done(function( msg ) {
+
+			nanobar.go(100);
 
 			var length = 0;
 
