@@ -1,5 +1,6 @@
 
 $("#calculate").click(function(){
+
 	
 	var reader = new FileReader();
 
@@ -29,14 +30,33 @@ $("#calculate").click(function(){
 		})
 		.done(function( msg ) {
 
-
-			$("#result").fadeIn(500);
+			var length = 0;
 
 			msg = JSON.parse(msg);
 
-			var HTML = "Expression : " + msg.Expression + "<br/>" + "Result : " + msg.Result;
+			var HTML = "";
+
+			for(var i = 0 ; i < msg.Expression.length ; i++){
+					HTML += "<span>" + msg.Expression[i] + "</span>";
+					length++;
+			}
+
+			HTML += "<span> = </span>";
+			length++;
+
+			HTML += "<span>" + msg.Result + "</span>";
+			length++;			
 
 			result.innerHTML = HTML;
+
+			$("#result span").each(function(index) {
+				if(index == length-1){
+					$(this).delay(150*index).fadeIn(100);
+				}else{
+					$(this).delay(100*index).fadeIn(50);
+				}
+			    
+			});
 
 		});
 
